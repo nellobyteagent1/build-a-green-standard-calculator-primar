@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a1f0a 0%, #1a3a1a 50%, #0d2b0d 100%);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.calculator {
+  width: 340px;
+  background: #1a2e1a;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(34, 139, 34, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.display {
+  background: #0d1a0d;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border: 1px solid rgba(34, 139, 34, 0.2);
+}
+
+.expression {
+  color: #6fbf6f;
+  font-size: 16px;
+  min-height: 22px;
+  word-break: break-all;
+  text-align: right;
+  opacity: 0.7;
+}
+
+.result {
+  color: #a5e6a5;
+  font-size: 40px;
+  font-weight: 300;
+  word-break: break-all;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  height: 62px;
+  border: none;
+  border-radius: 14px;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  background: #253d25;
+  color: #c8e6c8;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover {
+  background: #2e4d2e;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  background: #1e331e;
+  transform: translateY(1px);
+}
+
+.btn.fn {
+  background: #2a4a2a;
+  color: #7ecf7e;
+}
+
+.btn.fn:hover {
+  background: #346034;
+}
+
+.btn.op {
+  background: #2d6b2d;
+  color: #b8f0b8;
+}
+
+.btn.op:hover {
+  background: #368836;
+}
+
+.btn.op:active {
+  background: #255525;
+}
+
+.btn.eq {
+  background: linear-gradient(135deg, #2e8b2e, #228b22);
+  color: #fff;
+  font-size: 26px;
+}
+
+.btn.eq:hover {
+  background: linear-gradient(135deg, #36a336, #2ca02c);
+}
+
+.btn.eq:active {
+  background: linear-gradient(135deg, #267326, #1e7b1e);
+}
+
+.btn.zero {
+  grid-column: span 2;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    width: 100%;
+    max-width: 340px;
+    margin: 16px;
+    padding: 16px;
+  }
+
+  .btn {
+    height: 56px;
+    font-size: 20px;
+  }
+
+  .result {
+    font-size: 32px;
+  }
+}
